@@ -1,37 +1,35 @@
 # WebCDR
-## интерфейс промотра CDR и прослушивания записей звонков для Asterisk
+## interface de promotion de CDR et d'écoute des enregistrements d'appels pour Asterisk
 
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
 
-### Возможности
+### Opportunités
 
-- просмотр CDR, с фильтрацией по времени, номеру телефона, статусу, направлению звонка
-- встроенный HTML5/flash плеер для прослушивания записей звонков
-- скачивание записей звонков по одной и группой в zip-архиве
-- экспорт в Excel (xlsx)
-- статистика по входящим звонкам по дням недели/времени дня,
-  сгруппированным по диапазонам номеров, с экспортом в Excel
-- интерфейс администратора для управления пользователями
-- ограничение доступа пользователей данными по отдельным внутренним номерам
-- опционально - авторизация пользователей через ActiveDirectory
+- Visualisation CDR, filtrée par heure, numéro de téléphone, statut, direction des appels
+- lecteur HTML5 / flash intégré pour écouter les enregistrements d'appels
+- télécharger les enregistrements d'appels un par un et en groupe dans une archive zip
+- exporter vers Excel (xlsx)
+- statistiques sur les appels entrants par jour de la semaine / heure de la journée, regroupées par tranches de numéros, avec exportation vers Excel
+- interface d'administration pour la gestion des utilisateurs
+- restreindre l'accès des utilisateurs aux données sur les numéros de poste individuels
+- facultatif - autorisation de l'utilisateur via ActiveDirectory
 
-### Реализация
+### la mise en oeuvre
 
-Серверная часть - node.js, REST API на express.js.
-Клиентская - одностраничное приложение на Backbone/Marionette, зависимости через npm/bower, сборка с помощью Browserify.
+Côté serveur - node.js, API REST sur express.js. 
+Côté client - une application d'une seule page sur Backbone / Marionette, dépendances via npm / bower, construite à l'aide de Browserify.
 
-### Системные требования
+### Configuration requise
 
-Клиентская часть тестировалась на актуальных версиях Safari, Firefox, Chrome. Работа в IE не проверялась, поддержка не гарантируется.
+La partie client a été testée sur les versions actuelles de Safari, Firefox, Chrome. Le travail dans IE n'a pas été testé, le support n'est pas garanti.
 
-Требования к серверу: io.js 3.0+, npm. Работа на node.js 0.10+ не тестировалась.
-СУБД - MySQL 5.1+.
+Configuration requise pour le serveur: io.js 3.0+, npm. Le travail sur node.js 0.10+ n'a pas été testé. SGBD - MySQL 5.1+.
 
 ### TODO
 
-- добавить инсталлятор
-- добавить подробные инструкции по настройке Asterisk
-- deb/rpm пакеты
-- сделать список групп для отчётов конфигурируемым
-- реализовать полноценную поддержку часовых поясов
-- добавить поддержку i18n
+- ajouter un installateur
+- ajouter des instructions détaillées pour configurer Asterisk
+- paquets deb / rpm
+- rendre la liste des groupes pour les rapports configurable
+- implémenter une prise en charge complète des fuseaux horaires
+- ajouter le support i18n
